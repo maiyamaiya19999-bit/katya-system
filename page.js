@@ -1,0 +1,3 @@
+document.addEventListener('click',function(e){var b=e.target.closest('[data-copy]');if(!b)return;var t=document.getElementById(b.dataset.copy);if(!t)return;var txt=t.value||t.textContent;function ok(){b.textContent='Скопировано';setTimeout(function(){b.textContent='Скопировать помощника'},1800)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(txt).then(ok,function(){fallback()})}else{fallback()}
+function fallback(){var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok()}catch(err){}ta.remove()}});

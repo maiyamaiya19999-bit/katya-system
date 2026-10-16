@@ -177,6 +177,41 @@ details.doc[open]>summary::after{content:'свернуть ↑'}
 .foot .hand{font-family:var(--hand);color:var(--bordo);font-size:40px;line-height:1}
 
 .toc{margin:6px 0 0 18px;font-size:14.5px}.toc li{margin:3px 0}.toc a{color:var(--ink);text-decoration:none}.toc a:hover{color:var(--bordo)}
+/* ===== дорожная карта (по образцу Алёны) ===== */
+.h2{font-size:20px;margin:30px 0 4px}
+.legend{display:flex;gap:22px;flex-wrap:wrap;padding:18px 0 10px;font-size:13.5px;color:var(--soft)}
+.legend b{color:var(--ink);font-weight:600}
+details.stage{border:1px solid var(--hair);background:var(--paper);margin:14px 0}
+details.stage>summary{cursor:pointer;list-style:none;padding:20px 22px;display:flex;gap:16px;align-items:flex-start}
+details.stage>summary::-webkit-details-marker{display:none}
+.stage__num{font-family:var(--serif);font-style:italic;font-size:40px;color:var(--bordo);opacity:.35;min-width:44px;line-height:1}
+.stage__head{flex:1;display:flex;flex-direction:column}
+.stage__title{font-family:var(--serif);font-size:18.5px;font-weight:700;color:var(--ink);line-height:1.3}
+.stage__sub{font-size:14.5px;color:var(--body);margin-top:5px;line-height:1.6}
+.stage__status{font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;white-space:nowrap;margin-top:4px}
+.st-done{color:#3E6B3E;border:1px solid #B9CBB4;background:#F1F5EE}
+.st-now{color:var(--bordo);border:1px solid var(--bordo);background:var(--wash)}
+.stage__body{border-top:1px solid var(--hair);padding:6px 22px 22px}
+.stage__body h4{font-family:var(--serif);font-size:16px;font-weight:700;padding:20px 0 8px;margin:0;color:var(--ink)}
+.stage__body p{font-size:15px;color:var(--body);line-height:1.7;margin:0 0 8px}
+.mat{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--hair)}
+.mat:last-of-type{border-bottom:none}
+.mat__ico{font-size:11px;color:var(--bordo);min-width:34px;font-weight:700;letter-spacing:.5px}
+.mat__txt{flex:1;font-size:15px;color:var(--body);line-height:1.6}
+.mat__txt b{color:var(--ink);font-weight:600}
+.mat a.go{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--bordo);text-decoration:none;border-bottom:1px solid var(--bordo);white-space:nowrap}
+.hw{background:var(--wash);padding:14px 18px;margin:16px 0 4px;font-size:14.5px;color:var(--body);line-height:1.7}
+.hw strong{color:var(--bordo)}
+.hw p{margin:0 0 8px}.hw ul{margin:0 0 8px 18px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 8px}
+.docsec{margin:30px 0 10px}
+.docsec h2{margin:0 0 8px;font-size:21px}
+.docsec .lead{font-size:15.5px;margin-bottom:12px}
+.kitdoc{border:1px solid var(--hair);background:var(--paper);padding:0 18px;margin:10px 0}
+.kitdoc>summary{font-family:var(--serif);font-style:normal;font-weight:700;color:var(--ink);font-size:16px}
+.kitbar{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 10px}
+.hero .badge{display:inline-block;margin:0 0 10px}
+@media (max-width:600px){details.stage>summary{padding:16px;gap:10px}.stage__num{font-size:30px;min-width:34px}.stage__body{padding:4px 16px 18px}.mat{flex-wrap:wrap}}
 </style></head>
 <body><div class="wrap">
 <div class="top"><a class="logo" href="#"><img src="assets/logo.png" alt="MS"><span>maysoulme</span></a><span class="muted">система блога</span></div>
