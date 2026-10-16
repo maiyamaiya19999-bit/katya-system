@@ -65,8 +65,9 @@ def stage(n, title, sub, status, mats, docs=None, open_=False, extra=''):
     body=''.join(mats)
     for f,t,l in (docs or []):
         md=read(f)
-        if md: body+='<details class="doc"><summary>%s</summary><p class="muted">%s</p><div class="docbody">%s</div></details>' % (t,l,md2html(md))
+        if md: body+='<details class="doc" open><summary>%s</summary><p class="muted">%s</p><div class="docbody">%s</div></details>' % (t,l,md2html(md))
     body+=extra
+    open_=True
     return ('<details class="stage"%s><summary><span class="stage__num">%s</span><span class="stage__head"><span class="stage__title">%s</span><span class="stage__sub">%s</span></span>%s</summary>'
             '<div class="stage__body">%s</div></details>') % (' open' if open_ else '', n, title, sub, st, body)
 
@@ -141,6 +142,7 @@ def build():
       '<p class="meta">7 этапов · помощники под каждый шаг · все материалы в одном месте</p>'
       '</div><div class="photo"><img src="assets/katya.jpg" alt="Катя"></div></div></div>'
       '<div class="offer"><span class="k">Главное предложение</span><p>%s</p></div>'
+      '<div class="stats"><div><b>8</b><span>уроков в продукте</span></div><div><b>42</b><span>сторис в актуальных</span></div><div><b>28</b><span>дней плана канала</span></div><div><b>15</b><span>помощников с её данными</span></div></div>'
       '<h2 class="h2">Пять болей, на которые всё отвечает</h2><ol class="pains">%s</ol>'
       ''
       '%s%s<div class="btns"><a class="btn" href="downloads/katya-full-package.zip" download>Весь пакет (zip)</a><a class="btn ghost" href="https://maysoulme.ru/design-skills/">Дизайн-отдел</a></div>') % (html.escape(off2), pains, ''.join(stages), ask)
