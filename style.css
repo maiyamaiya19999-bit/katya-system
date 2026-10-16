@@ -207,3 +207,7 @@ details.stage>summary::-webkit-details-marker{display:none}
 .kitbar{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 10px}
 .hero .badge{display:inline-block;margin:0 0 10px}
 @media (max-width:600px){details.stage>summary{padding:16px;gap:10px}.stage__num{font-size:30px;min-width:34px}.stage__body{padding:4px 16px 18px}.mat{flex-wrap:wrap}}
+.stage__body details.doc{border:1px solid var(--hair);background:var(--milk);padding:0 16px;margin:10px 0}
+.stage__body details.doc>summary{font-family:var(--serif);font-style:normal;font-weight:700;color:var(--ink);font-size:15.5px;padding:14px 0 8px}
+.stage__body details.doc>.muted{margin:0 0 6px;font-size:13.5px}
+.stage__body .mat:last-of-type{border-bottom:1px solid var(--hair)}
