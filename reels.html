@@ -264,10 +264,7 @@ function mcopy(t, b) {
 document.addEventListener('click', function (ev) {
   var b = ev.target.closest('.copybtn'); if (!b) return;
   if (b.classList.contains('copyall')) {
-    var all = Array.prototype.map.call(document.querySelectorAll('.copybtn[data-copy]:not(.copyall)'), function (x, i) { return (x.getAttribute('data-title') || ('Ролик ' + (i + 1))) + '
-' + x.getAttribute('data-copy'); }).join('
-
-');
+    var all = Array.prototype.map.call(document.querySelectorAll('.copybtn[data-copy]:not(.copyall)'), function (x, i) { return (x.getAttribute('data-title') || ('Ролик ' + (i + 1))) + String.fromCharCode(10) + x.getAttribute('data-copy'); }).join(String.fromCharCode(10, 10));
     mcopy(all, b);
   } else { mcopy(b.getAttribute('data-copy'), b); }
 });
